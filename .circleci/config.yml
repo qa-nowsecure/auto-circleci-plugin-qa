@@ -4,7 +4,7 @@ jobs:
     build:
         docker:
             # specify the version you desire here
-            - image: cimg/openjdk:11.0.13
+            - image: circleci/openjdk:8-jdk
         environment:
             # Customize the JVM maximum heap limit
             JVM_OPTS: -Xmx500m

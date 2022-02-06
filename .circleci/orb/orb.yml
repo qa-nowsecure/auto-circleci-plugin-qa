@@ -10,7 +10,7 @@ executors:
   default:
     description: Java docker container to use when running the NowSecure AUTO orb
     docker:
-    - image: cimg/openjdk:11.0.13-node
+    - image: circleci/openjdk:8-jdk-node
     environment:
       TERM: dumb
 commands:
