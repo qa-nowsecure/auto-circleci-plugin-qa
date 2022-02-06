@@ -4,7 +4,7 @@ ENV PLUGIN_VERSION 1.2.0e
 #
 # Download nowsecure plugin source
 RUN mkdir -p /usr/local/share/nowsecure
-RUN curl -Ls https://github.com/qa-nowsecure/auto-circleci-plugin-qa/archive/${PLUGIN_VERSION}.tar.gz | tar -xzf - -C /usr/local/share/nowsecure
+RUN curl -Ls https://github.com/qa-nowsecure/auto-circleci-plugin-qa/releases/download/${PLUGIN_VERSION}/${PLUGIN_VERSION}.tar.gz | tar -xzf - -C /usr/local/share/nowsecure
 RUN cp /usr/local/share/nowsecure/auto-circleci-plugin-${PLUGIN_VERSION}/bin/nowsecure.sh /usr/local/bin/nowsecure.sh
 
 ENV PLUGIN_JAR /usr/local/share/nowsecure/auto-circleci-plugin-${PLUGIN_VERSION}/dist/all-in-one-jar-${PLUGIN_VERSION}.jar
